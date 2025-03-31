@@ -17,29 +17,31 @@ public class ProjectRunner
 		readTextFile();
 		calculateGpa();
 		greetUser();
-//		addOrDelete();
-//		changeStudents();
-//		sortStudents();
-//		readTextFile();	
+		addOrDelete();
+		changeStudents();
+		sortStudents();
+		readTextFile();	
 	}
+	
 	 public static void greetUser() throws FileNotFoundException
 	 {
 		Scanner userInput = new Scanner (System.in);
 		System.out.println("Hello! I hope you have had a splendid day!");
 		System.out.println("What would you like to do?");
-		System.out.println("a) add or delete a student");
-		System.out.println("b) change student grades/schedule");
-		System.out.println("c) sort students");
+		System.out.println("1) Add or delete a student");
+		System.out.println("2) Change student grades/schedule");
+		System.out.println("3) Sort students");
 	    String playerGuess = userInput.nextLine(); 
-	    if(playerGuess.equals("a") || playerGuess.equals("a)"))
+	    
+	    if( playerGuess.equals("1") || playerGuess.equals("1)"))
 	    	{
 	    		addOrDelete();
 	    	}
-	    if(playerGuess.equals("b") || playerGuess.equals("b)"))
+	    if( playerGuess.equals("2") || playerGuess.equals("2)"))
 	    	{
 	    		changeStudents();
 	    	}
-	    if(playerGuess.equals("c") || playerGuess.equals("c)"))
+	    if( playerGuess.equals("3") || playerGuess.equals("3)"))
 	    	{
 	    		sortStudents();
 	    	}
@@ -125,8 +127,8 @@ public class ProjectRunner
 			studentList.add(new Student (myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), myFile.next(), 0.0));
 		}
 		
-		for (Student s : studentList)
-		{
+//		for (Student s : studentList)
+//		{
 //			System.out.print(s.getFirstName() + " ");
 //			System.out.println(s.getLastName() + " ");
 //			System.out.println(s.getClass1() + " ");
@@ -135,11 +137,11 @@ public class ProjectRunner
 //			System.out.println(s.getClassGrade1() + " ");
 //			System.out.println(s.getClass3() + " ");
 //			System.out.println(s.getClassGrade3() + " ");
-
+//
 //			System.out.println(s.getGpa());
-
-		}
-		
+//
+//		}
+//		
 		}
 		
 		catch (IOException ex)
@@ -150,7 +152,7 @@ public class ProjectRunner
 		calculateGpa();
 	}
 	
-	//calculate the student's GPA
+
 	 public static void calculateGpa()
 	{
 	
